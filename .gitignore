@@ -1,0 +1,5 @@
+# Power BI local caches / settings
+**/.pbi/cache.abf
+**/.pbi/localSettings.json
+*.pbix.tmp
+~$*
