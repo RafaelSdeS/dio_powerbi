@@ -1,0 +1,40 @@
+{
+  "name": "DioClean",
+  "dataColors": [
+    "#0F766E",
+    "#F59E0B",
+    "#2563EB",
+    "#DB2777",
+    "#7C3AED",
+    "#64748B",
+    "#0891B2",
+    "#65A30D"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#1B2540",
+  "tableAccent": "#0F766E",
+  "good": "#15803D",
+  "neutral": "#F59E0B",
+  "bad": "#B91C1C",
+  "maximum": "#0F766E",
+  "center": "#F59E0B",
+  "minimum": "#B91C1C",
+  "textClasses": {
+    "label": {
+      "fontFace": "Segoe UI",
+      "color": "#1B2540"
+    },
+    "callout": {
+      "fontFace": "Segoe UI",
+      "color": "#0F766E"
+    },
+    "title": {
+      "fontFace": "Segoe UI",
+      "color": "#1B2540"
+    },
+    "header": {
+      "fontFace": "Segoe UI",
+      "color": "#5B6785"
+    }
+  }
+}

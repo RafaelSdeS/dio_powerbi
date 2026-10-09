@@ -1,0 +1,47 @@
+table Departamentos
+	lineageTag: a37adc72-c50d-4bc1-a0a9-12f7322f2832
+
+	column Store
+		dataType: string
+		lineageTag: eb09defb-eda3-4df4-b257-f666bc19ba18
+		summarizeBy: none
+		sourceColumn: Store
+
+	column Dnumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 9f0c9ca1-3f78-49e7-9b11-3ac1e1a15a15
+		summarizeBy: none
+		sourceColumn: Dnumber
+
+	column Mgr_ssn
+		dataType: string
+		lineageTag: 98d1f0f7-ae9b-422c-b409-37b1edbb06b8
+		summarizeBy: none
+		sourceColumn: Mgr_ssn
+
+	column Gerente_Departamento
+		dataType: string
+		lineageTag: 07cea818-3fce-44e1-b86e-833507671276
+		summarizeBy: none
+		sourceColumn: Gerente_Departamento
+
+	partition Departamentos = m
+		mode: import
+		source =
+				let
+				    // Mescla departament com dept_locations: um departamento com N locais gera N linhas
+				    Mescla = Table.NestedJoin(departament, {"Dnumber"}, dept_locations, {"Dnumber"}, "Locais", JoinKind.LeftOuter),
+				    Expande = Table.ExpandTableColumn(Mescla, "Locais", {"Dlocation"}),
+				    // Nome do gerente do departamento
+				    Nomes = Table.AddColumn(Table.SelectColumns(employee, {"Ssn", "Fname", "Lname"}), "Gerente_Departamento", each [Fname] & " " & [Lname], type text),
+				    MesclaGer = Table.NestedJoin(Expande, {"Mgr_ssn"}, Table.SelectColumns(Nomes, {"Ssn", "Gerente_Departamento"}), {"Ssn"}, "G", JoinKind.LeftOuter),
+				    ExpandeGer = Table.ExpandTableColumn(MesclaGer, "G", {"Gerente_Departamento"}),
+				    // Mescla local + departamento em uma coluna única (Store), como no enunciado
+				    Store = Table.CombineColumns(ExpandeGer, {"Dlocation", "Dname"}, Combiner.CombineTextByDelimiter(" ", QuoteStyle.None), "Store"),
+				    Colunas = Table.SelectColumns(Store, {"Store", "Dnumber", "Mgr_ssn", "Gerente_Departamento"}),
+				    Ordenado = Table.Sort(Colunas, {{"Dnumber", Order.Ascending}, {"Store", Order.Ascending}})
+				in
+				    Ordenado
+
+	annotation PBI_ResultType = Table

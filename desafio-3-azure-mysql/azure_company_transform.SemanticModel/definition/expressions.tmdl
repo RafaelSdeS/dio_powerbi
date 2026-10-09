@@ -1,0 +1,64 @@
+expression Servidor = "SEU-SERVIDOR.mysql.database.azure.com:3306" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 785fb818-bb4b-4aea-912a-aa873466727c
+
+	annotation PBI_ResultType = Text
+
+expression Banco = "azure_company" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 446511f4-6bbb-441e-b586-1efdea31dad7
+
+	annotation PBI_ResultType = Text
+
+expression employee =
+		let
+		    Fonte = MySQL.Database(Servidor, Banco, [ReturnSingleDatabase = true]),
+		    Tabela = Fonte{[Schema = Banco, Item = "employee"]}[Data],
+		    Tipos = Table.TransformColumnTypes(Tabela, {{"Fname", type text}, {"Minit", type text}, {"Lname", type text}, {"Ssn", type text}, {"Bdate", type date}, {"Address", type text}, {"Sex", type text}, {"Salary", type number}, {"Super_ssn", type text}, {"Dno", Int64.Type}}, "en-US")
+		in
+		    Tipos
+	lineageTag: 5041fa8f-3190-454e-b812-72571fe72fb7
+
+	annotation PBI_ResultType = Table
+
+expression departament =
+		let
+		    Fonte = MySQL.Database(Servidor, Banco, [ReturnSingleDatabase = true]),
+		    Tabela = Fonte{[Schema = Banco, Item = "departament"]}[Data],
+		    Tipos = Table.TransformColumnTypes(Tabela, {{"Dname", type text}, {"Dnumber", Int64.Type}, {"Mgr_ssn", type text}, {"Mgr_start_date", type date}, {"Dept_create_date", type date}}, "en-US")
+		in
+		    Tipos
+	lineageTag: 06d7efc7-ad08-47a7-9dd7-02dbfeaef2d5
+
+	annotation PBI_ResultType = Table
+
+expression dept_locations =
+		let
+		    Fonte = MySQL.Database(Servidor, Banco, [ReturnSingleDatabase = true]),
+		    Tabela = Fonte{[Schema = Banco, Item = "dept_locations"]}[Data],
+		    Tipos = Table.TransformColumnTypes(Tabela, {{"Dnumber", Int64.Type}, {"Dlocation", type text}}, "en-US")
+		in
+		    Tipos
+	lineageTag: f60f09c3-f711-4d89-a6f6-586ccf701fb6
+
+	annotation PBI_ResultType = Table
+
+expression project =
+		let
+		    Fonte = MySQL.Database(Servidor, Banco, [ReturnSingleDatabase = true]),
+		    Tabela = Fonte{[Schema = Banco, Item = "project"]}[Data],
+		    Tipos = Table.TransformColumnTypes(Tabela, {{"Pname", type text}, {"Pnumber", Int64.Type}, {"Plocation", type text}, {"Dnum", Int64.Type}}, "en-US")
+		in
+		    Tipos
+	lineageTag: 70e71b03-d13b-4e2a-bffb-84dcac016709
+
+	annotation PBI_ResultType = Table
+
+expression works_on =
+		let
+		    Fonte = MySQL.Database(Servidor, Banco, [ReturnSingleDatabase = true]),
+		    Tabela = Fonte{[Schema = Banco, Item = "works_on"]}[Data],
+		    Tipos = Table.TransformColumnTypes(Tabela, {{"Essn", type text}, {"Pno", Int64.Type}, {"Hours", type number}}, "en-US")
+		in
+		    Tipos
+	lineageTag: 813f78aa-b3f0-41b7-86f9-45dc148b3295
+
+	annotation PBI_ResultType = Table

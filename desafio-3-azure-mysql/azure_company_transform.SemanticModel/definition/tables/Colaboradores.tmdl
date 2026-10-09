@@ -1,0 +1,109 @@
+table Colaboradores
+	lineageTag: 0533c449-5ec3-416c-aa37-b1b59f43da11
+
+	column Ssn
+		dataType: string
+		lineageTag: 7089a8d0-be48-4bea-8deb-ad8e21320cd5
+		summarizeBy: none
+		sourceColumn: Ssn
+
+	column Colaborador
+		dataType: string
+		lineageTag: edce224c-2789-4dde-a6be-bfb94e0bd530
+		summarizeBy: none
+		sourceColumn: Colaborador
+
+	column Sex
+		dataType: string
+		lineageTag: 763b007b-d936-4ce5-8b07-7556f0026c37
+		summarizeBy: none
+		sourceColumn: Sex
+
+	column Bdate
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: cafb2970-da8c-4336-abe1-d1c1d6ebab98
+		summarizeBy: none
+		sourceColumn: Bdate
+
+	column Salary
+		dataType: double
+		formatString: $#,0.00
+		lineageTag: 01d8d644-32d1-44d3-bd56-3eb193638f19
+		summarizeBy: none
+		sourceColumn: Salary
+
+	column Numero
+		dataType: string
+		lineageTag: 507dd2a9-315c-4ee1-96d4-3127bc5227b1
+		summarizeBy: none
+		sourceColumn: Numero
+
+	column Rua
+		dataType: string
+		lineageTag: ae909a7f-ad68-4594-bca0-68d5451b9e96
+		summarizeBy: none
+		sourceColumn: Rua
+
+	column Cidade
+		dataType: string
+		lineageTag: 5017277c-9cee-42d6-9f60-d8a93466c62a
+		summarizeBy: none
+		sourceColumn: Cidade
+
+	column Estado
+		dataType: string
+		lineageTag: 2b31ebf9-11fd-49ad-8a89-778332540570
+		summarizeBy: none
+		sourceColumn: Estado
+
+	column Super_ssn
+		dataType: string
+		lineageTag: a6bb981e-ff52-4e47-80f4-69d87edc37a6
+		summarizeBy: none
+		sourceColumn: Super_ssn
+
+	column Gerente
+		dataType: string
+		lineageTag: bb523ad0-32df-48b3-8028-a689ab6e2e7d
+		summarizeBy: none
+		sourceColumn: Gerente
+
+	column Dno
+		dataType: int64
+		formatString: 0
+		lineageTag: a46ceb12-0a1f-48ba-a160-9a6753d3ad37
+		summarizeBy: none
+		sourceColumn: Dno
+
+	column Departamento
+		dataType: string
+		lineageTag: 6c472924-af90-447c-86e4-57b813a1cc3a
+		summarizeBy: none
+		sourceColumn: Departamento
+
+	partition Colaboradores = m
+		mode: import
+		source =
+				let
+				    Origem = employee,
+				    // 1) Nome + sobrenome em uma única coluna
+				    Colaborador = Table.AddColumn(Origem, "Colaborador", each [Fname] & " " & [Lname], type text),
+				    // 2) Separa o endereço complexo "numero-rua-cidade-UF" em colunas
+				    Numero = Table.AddColumn(Colaborador, "Numero", each Text.Split([Address], "-"){0}, type text),
+				    Rua = Table.AddColumn(Numero, "Rua", each let p = Text.Split([Address], "-") in Text.Combine(List.Range(p, 1, List.Count(p) - 3), " "), type text),
+				    Cidade = Table.AddColumn(Rua, "Cidade", each let p = Text.Split([Address], "-") in p{List.Count(p) - 2}, type text),
+				    Estado = Table.AddColumn(Cidade, "Estado", each List.Last(Text.Split([Address], "-")), type text),
+				    // 3) Mescla com departament (LEFT OUTER a partir de employee: ninguém some se faltar departamento)
+				    MesclaDept = Table.NestedJoin(Estado, {"Dno"}, Table.SelectColumns(departament, {"Dnumber", "Dname"}), {"Dnumber"}, "Dept", JoinKind.LeftOuter),
+				    ExpandeDept = Table.ExpandTableColumn(MesclaDept, "Dept", {"Dname"}, {"Departamento"}),
+				    // 4) Mescla de employee com ele mesmo para obter o nome do gerente (Super_ssn -> Ssn)
+				    Gerentes = Table.AddColumn(Table.SelectColumns(Origem, {"Ssn", "Fname", "Lname"}), "Gerente", each [Fname] & " " & [Lname], type text),
+				    MesclaGer = Table.NestedJoin(ExpandeDept, {"Super_ssn"}, Table.SelectColumns(Gerentes, {"Ssn", "Gerente"}), {"Ssn"}, "G", JoinKind.LeftOuter),
+				    ExpandeGer = Table.ExpandTableColumn(MesclaGer, "G", {"Gerente"}),
+				    // 5) Mantém só o que o relatório usa
+				    Colunas = Table.SelectColumns(ExpandeGer, {"Ssn", "Colaborador", "Sex", "Bdate", "Salary", "Numero", "Rua", "Cidade", "Estado", "Super_ssn", "Gerente", "Dno", "Departamento"})
+				in
+				    Colunas
+
+	annotation PBI_ResultType = Table

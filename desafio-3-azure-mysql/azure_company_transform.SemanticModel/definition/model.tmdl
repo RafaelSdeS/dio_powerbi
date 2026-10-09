@@ -1,0 +1,25 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Servidor", "Banco", "employee", "departament", "dept_locations", "project", "works_on", "Colaboradores", "Departamentos", "Colaboradores_por_Gerente", "Horas_por_Projeto"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref expression Servidor
+ref expression Banco
+ref expression employee
+ref expression departament
+ref expression dept_locations
+ref expression project
+ref expression works_on
+ref table Colaboradores
+ref table Departamentos
+ref table Colaboradores_por_Gerente
+ref table Horas_por_Projeto
+
+ref cultureInfo pt-BR

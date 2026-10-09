@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "azure_company_transform"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "5452c75a-e746-4f70-9046-01f7647e5d29"
+  }
+}

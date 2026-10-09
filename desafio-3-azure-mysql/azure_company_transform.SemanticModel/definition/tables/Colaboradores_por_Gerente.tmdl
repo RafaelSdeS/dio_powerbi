@@ -1,0 +1,29 @@
+table Colaboradores_por_Gerente
+	lineageTag: 1fe66d27-1ef2-46c4-a206-044027b31a87
+
+	column Gerente
+		dataType: string
+		lineageTag: 90a2c289-c15e-4a36-83df-6e7d46369d5b
+		summarizeBy: none
+		sourceColumn: Gerente
+
+	column Qtd_Colaboradores
+		dataType: int64
+		formatString: 0
+		lineageTag: 4490cb28-c17f-4d71-b2a4-79997321ca12
+		summarizeBy: none
+		sourceColumn: Qtd_Colaboradores
+
+	partition Colaboradores_por_Gerente = m
+		mode: import
+		source =
+				let
+				    Origem = Colaboradores,
+				    // quem não tem gerente (topo da hierarquia) não entra na contagem
+				    ComGerente = Table.SelectRows(Origem, each [Gerente] <> null),
+				    Agrupado = Table.Group(ComGerente, {"Gerente"}, {{"Qtd_Colaboradores", each Table.RowCount(_), Int64.Type}}),
+				    Ordenado = Table.Sort(Agrupado, {{"Qtd_Colaboradores", Order.Descending}, {"Gerente", Order.Ascending}})
+				in
+				    Ordenado
+
+	annotation PBI_ResultType = Table

@@ -1,0 +1,42 @@
+table Horas_por_Projeto
+	lineageTag: 9cfea26d-a03c-4de8-9d1b-c3f4823044c7
+
+	column Pno
+		dataType: int64
+		formatString: 0
+		lineageTag: 0d1611c0-2ba7-45ca-a5fc-bdd0943c7493
+		summarizeBy: none
+		sourceColumn: Pno
+
+	column Pname
+		dataType: string
+		lineageTag: 5c09af91-2313-453d-9059-f19b15aef774
+		summarizeBy: none
+		sourceColumn: Pname
+
+	column Total_Horas
+		dataType: double
+		formatString: 0.0
+		lineageTag: b6619929-8deb-4d8a-ba6c-e66cc170bf74
+		summarizeBy: none
+		sourceColumn: Total_Horas
+
+	column Qtd_Colaboradores
+		dataType: int64
+		formatString: 0
+		lineageTag: 80742eec-8ad4-4248-b5d3-5fe1cf9bdc94
+		summarizeBy: none
+		sourceColumn: Qtd_Colaboradores
+
+	partition Horas_por_Projeto = m
+		mode: import
+		source =
+				let
+				    Mescla = Table.NestedJoin(works_on, {"Pno"}, project, {"Pnumber"}, "P", JoinKind.LeftOuter),
+				    Expande = Table.ExpandTableColumn(Mescla, "P", {"Pname"}),
+				    Agrupado = Table.Group(Expande, {"Pno", "Pname"}, {{"Total_Horas", each List.Sum([Hours]), type number}, {"Qtd_Colaboradores", each Table.RowCount(_), Int64.Type}}),
+				    Ordenado = Table.Sort(Agrupado, {{"Pno", Order.Ascending}})
+				in
+				    Ordenado
+
+	annotation PBI_ResultType = Table
