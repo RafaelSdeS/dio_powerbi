@@ -1,0 +1,42 @@
+table D_Detalhes
+	lineageTag: b2e65414-ab27-4a91-a112-37c24a430228
+
+	column ID_Detalhe
+		dataType: int64
+		formatString: 0
+		lineageTag: 3c2c0391-4de6-4eb1-9c99-5816cbe55983
+		summarizeBy: none
+		sourceColumn: ID_Detalhe
+
+		annotation SummarizationSetBy = Automatic
+
+	column Segment
+		dataType: string
+		lineageTag: 9da6064e-439f-4d84-a09f-9dcd8d622087
+		summarizeBy: none
+		sourceColumn: Segment
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 82907e4a-f256-44ec-a8eb-5dff5043f8ac
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	partition D_Detalhes = m
+		mode: import
+		source =
+				let
+				    Origem = Financials_origem,
+				    Distintos = Table.Distinct(Table.SelectColumns(Origem, {"Segment", "Country"})),
+				    Ordenado = Table.Sort(Distintos, {{"Segment", Order.Ascending}, {"Country", Order.Ascending}}),
+				    Indice = Table.AddIndexColumn(Ordenado, "ID_Detalhe", 1, 1, Int64.Type),
+				    Colunas = Table.ReorderColumns(Indice, {"ID_Detalhe", "Segment", "Country"})
+				in
+				    Colunas
+
+	annotation PBI_ResultType = Table
+

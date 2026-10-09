@@ -1,0 +1,60 @@
+table D_Calendario
+	lineageTag: 09e6e456-6778-423f-a078-c846b13c70a2
+	dataCategory: Time
+
+	column Date
+		dataType: dateTime
+		isKey
+		formatString: dd/mm/yyyy
+		lineageTag: 74e31149-011a-4fe3-99b3-2f3071da08ea
+		summarizeBy: none
+		sourceColumn: [Date]
+
+	column Ano
+		dataType: int64
+		formatString: 0
+		lineageTag: a5c012a8-33cc-48a2-8bf1-f20cc2ee6797
+		summarizeBy: sum
+		sourceColumn: [Ano]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mes Num'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: e50538d6-e610-458c-a57c-ae66a8045be2
+		summarizeBy: sum
+		sourceColumn: [Mes Num]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes
+		dataType: string
+		lineageTag: c22031e1-dc10-426f-a2c8-43da89b10a6e
+		summarizeBy: none
+		sourceColumn: [Mes]
+		sortByColumn: 'Mes Num'
+
+	column Trimestre
+		dataType: string
+		lineageTag: 206bf419-37b2-4247-bfb5-be3a409d48d8
+		summarizeBy: none
+		sourceColumn: [Trimestre]
+
+	partition D_Calendario = calculated
+		mode: import
+		source =
+				ADDCOLUMNS(
+				    CALENDAR(
+				        DATE(YEAR(MIN(F_Vendas[Date])), 1, 1),
+				        DATE(YEAR(MAX(F_Vendas[Date])), 12, 31)
+				    ),
+				    "Ano", YEAR([Date]),
+				    "Mes Num", MONTH([Date]),
+				    "Mes", FORMAT([Date], "mmm"),
+				    "Trimestre", "T" & QUARTER([Date])
+				)
+
+	annotation PBI_ResultType = Table
+
