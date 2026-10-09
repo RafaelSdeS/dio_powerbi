@@ -1,0 +1,55 @@
+table D_Descontos
+	lineageTag: dd82ea91-98c1-401a-a7c2-c18db68509d3
+
+	column ID_Desconto
+		dataType: int64
+		formatString: 0
+		lineageTag: 9263eeea-0a0c-438a-bb93-c435224f7696
+		summarizeBy: none
+		sourceColumn: ID_Desconto
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Discount Band'
+		dataType: string
+		lineageTag: 30fefc9a-e12a-428c-9bbe-35ee0865d813
+		summarizeBy: none
+		sourceColumn: Discount Band
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Desconto %'
+		dataType: double
+		lineageTag: 084afa2b-a94f-4597-9000-185fb78cd9b0
+		summarizeBy: none
+		sourceColumn: Desconto %
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Ordem Faixa'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4b08c403-6381-43fe-8ed6-64dfb866f7da
+		summarizeBy: none
+		sourceColumn: Ordem Faixa
+
+		annotation SummarizationSetBy = Automatic
+
+	partition D_Descontos = m
+		mode: import
+		source =
+				let
+				    Origem = Financials_origem,
+				    Taxa = Table.AddColumn(Origem, "Desconto %", each if [Gross Sales] = 0 then 0 else Number.Round([Discounts] / [Gross Sales], 4), type number),
+				    Distintos = Table.Distinct(Table.SelectColumns(Taxa, {"Discount Band", "Desconto %"})),
+				    Ordem = Table.AddColumn(Distintos, "Ordem Faixa", each if [Discount Band] = "None" then 0 else if [Discount Band] = "Low" then 1 else if [Discount Band] = "Medium" then 2 else 3, Int64.Type),
+				    Ordenado = Table.Sort(Ordem, {{"Ordem Faixa", Order.Ascending}, {"Desconto %", Order.Ascending}}),
+				    Indice = Table.AddIndexColumn(Ordenado, "ID_Desconto", 1, 1, Int64.Type),
+				    Colunas = Table.ReorderColumns(Indice, {"ID_Desconto", "Discount Band", "Desconto %", "Ordem Faixa"})
+				in
+				    Colunas
+
+	annotation PBI_ResultType = Table
+

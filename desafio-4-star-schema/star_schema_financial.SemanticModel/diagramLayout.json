@@ -1,0 +1,108 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": -300
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 500,
+            "y": 160
+          },
+          "nodeIndex": "F_Vendas",
+          "size": {
+            "height": 220,
+            "width": 260
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 60,
+            "y": 0
+          },
+          "nodeIndex": "D_Produtos",
+          "size": {
+            "height": 220,
+            "width": 220
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 65,
+            "y": 416.25
+          },
+          "nodeIndex": "D_Produtos_Detalhes",
+          "nodeLineageTag": "ff9ebdf4-71be-4054-8f4b-a49341de606e",
+          "size": {
+            "height": 220,
+            "width": 220
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 940,
+            "y": 0
+          },
+          "nodeIndex": "D_Descontos",
+          "size": {
+            "height": 220,
+            "width": 220
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 940,
+            "y": 300
+          },
+          "nodeIndex": "D_Detalhes",
+          "size": {
+            "height": 220,
+            "width": 220
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 500,
+            "y": 520
+          },
+          "nodeIndex": "D_Calendario",
+          "size": {
+            "height": 220,
+            "width": 220
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1298.75,
+            "y": 233.75
+          },
+          "nodeIndex": "Financials_origem",
+          "nodeLineageTag": "051f0823-d15a-4e25-80d8-bf6aac0022ad",
+          "size": {
+            "height": 220,
+            "width": 260
+          },
+          "zIndex": 6
+        }
+      ],
+      "name": "Esquema em Estrela",
+      "zoomValue": 80,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Esquema em Estrela",
+  "defaultDiagram": "Esquema em Estrela"
+}

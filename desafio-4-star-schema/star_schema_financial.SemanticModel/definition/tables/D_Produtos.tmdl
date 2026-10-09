@@ -1,0 +1,103 @@
+table D_Produtos
+	lineageTag: cc6117f2-d609-4a1e-baf8-ecf41837cb12
+
+	column ID_Produto
+		dataType: int64
+		formatString: 0
+		lineageTag: 9c6925fb-ffb1-4ab5-9837-e6db9489c587
+		summarizeBy: none
+		sourceColumn: ID_Produto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Produto
+		dataType: string
+		lineageTag: ddfd2c37-8d0f-48b0-8cf2-e6ba7b0f5fd3
+		summarizeBy: none
+		sourceColumn: Produto
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Indice de Produtos'
+		dataType: string
+		lineageTag: 3e0eeafa-e60e-4c8d-8021-cbaa28faad11
+		summarizeBy: none
+		sourceColumn: Indice de Produtos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Media Unidades Vendidas'
+		dataType: double
+		lineageTag: 9bfd11c5-0410-49c9-9693-8ffc1ab6f5c0
+		summarizeBy: sum
+		sourceColumn: Media Unidades Vendidas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Media Valor Vendas'
+		dataType: double
+		lineageTag: bf7bab40-b279-472e-9a1b-bf2e5febd4ce
+		summarizeBy: sum
+		sourceColumn: Media Valor Vendas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Mediana Valor Vendas'
+		dataType: double
+		lineageTag: 946e899d-e3dc-4b7f-afe8-cf30b3448a9e
+		summarizeBy: sum
+		sourceColumn: Mediana Valor Vendas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Valor Maximo Venda'
+		dataType: double
+		lineageTag: 10b88b6b-fee4-4930-8b58-496a796080ac
+		summarizeBy: sum
+		sourceColumn: Valor Maximo Venda
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Valor Minimo Venda'
+		dataType: double
+		lineageTag: 15e1d99c-aea2-4500-a7e7-8444c3cde878
+		summarizeBy: sum
+		sourceColumn: Valor Minimo Venda
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition D_Produtos = m
+		mode: import
+		source =
+				let
+				    Origem = Financials_origem,
+				    Agrupado = Table.Group(Origem, {"Product"}, {
+				        {"Media Unidades Vendidas", each List.Average([Units Sold]), type number},
+				        {"Media Valor Vendas", each List.Average([Sales]), type number},
+				        {"Mediana Valor Vendas", each List.Median([Sales]), type number},
+				        {"Valor Maximo Venda", each List.Max([Sales]), type number},
+				        {"Valor Minimo Venda", each List.Min([Sales]), type number}
+				    }),
+				    Ordenado = Table.Sort(Agrupado, {{"Product", Order.Ascending}}),
+				    Indice = Table.AddIndexColumn(Ordenado, "ID_Produto", 1, 1, Int64.Type),
+				    Renomeado = Table.RenameColumns(Indice, {{"Product", "Produto"}}),
+				    Classificacao = Table.AddColumn(Renomeado, "Indice de Produtos", each
+				        if [Media Valor Vendas] >= 180000 then "Alto"
+				        else if [Media Valor Vendas] >= 160000 then "Medio"
+				        else "Baixo", type text),
+				    Colunas = Table.ReorderColumns(Classificacao, {"ID_Produto", "Produto", "Indice de Produtos", "Media Unidades Vendidas", "Media Valor Vendas", "Mediana Valor Vendas", "Valor Maximo Venda", "Valor Minimo Venda"})
+				in
+				    Colunas
+
+	annotation PBI_ResultType = Table
+

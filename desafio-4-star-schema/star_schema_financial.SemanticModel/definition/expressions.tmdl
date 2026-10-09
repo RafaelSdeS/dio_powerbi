@@ -1,0 +1,5 @@
+expression CaminhoDados = "C:\Users\rafe_\Documents\dio\dataset\Financial Sample.xlsx" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: adc67b11-d71c-44a9-91c5-0bfaf2c56c3d
+
+	annotation PBI_ResultType = Text
+

@@ -1,0 +1,30 @@
+relationship f9e7a400-5427-4841-8646-5bbae48e90ab
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Financials_origem.Date
+	toColumn: LocalDateTable_a11f7abb-5733-4dac-99e3-433b2e4ab44d.Date
+
+relationship 13c319a3-cb6b-4fe3-ae6c-32684266ac4e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: F_Vendas.Date
+	toColumn: LocalDateTable_fa0cfa7e-bd94-4b45-a711-6f64b1421fa2.Date
+
+relationship AutoDetected_148c4fe4-56bc-4b23-b7ef-f2fcfc666958
+	fromColumn: F_Vendas.ID_Produto
+	toColumn: D_Produtos.ID_Produto
+
+relationship AutoDetected_b4a71d80-18ab-44d5-9abb-1a3ece93519b
+	fromColumn: F_Vendas.ID_Produto_Detalhe
+	toColumn: D_Produtos_Detalhes.ID_Produto_Detalhe
+
+relationship AutoDetected_8e861866-d75b-4057-bbdb-ace020adad61
+	fromColumn: F_Vendas.ID_Desconto
+	toColumn: D_Descontos.ID_Desconto
+
+relationship AutoDetected_419e3d56-6f39-4902-aedc-4005fd5d09c1
+	fromColumn: F_Vendas.ID_Detalhe
+	toColumn: D_Detalhes.ID_Detalhe
+
+relationship F_Vendas_Date_D_Calendario_Date
+	fromColumn: F_Vendas.Date
+	toColumn: D_Calendario.Date
+

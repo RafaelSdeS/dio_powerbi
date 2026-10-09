@@ -1,0 +1,195 @@
+table F_Vendas
+	lineageTag: 82869420-9c52-4e85-9a2b-c4af1b77abaf
+
+	measure 'Total Vendas' = SUM(F_Vendas[Sales])
+		formatString: $#,0
+		displayFolder: Medidas
+		lineageTag: cf9cb35c-f884-4b75-8fb9-027c8549344a
+
+	measure 'Total Lucro' = SUM(F_Vendas[Profit])
+		formatString: $#,0
+		displayFolder: Medidas
+		lineageTag: 485dbc3c-a9e2-400d-8296-31463b89f040
+
+	measure 'Unidades Vendidas' = SUM(F_Vendas[Units Sold])
+		formatString: #,0
+		displayFolder: Medidas
+		lineageTag: 7ebcb3cf-867d-4834-9ce9-6cde68f332e1
+
+	measure 'Total Descontos' = SUM(F_Vendas[Discounts])
+		formatString: $#,0
+		displayFolder: Medidas
+		lineageTag: afe95e14-c3d8-44e0-984b-c597b30a2b74
+
+	measure 'Margem %' = DIVIDE([Total Lucro], [Total Vendas])
+		formatString: 0.0%
+		displayFolder: Medidas
+		lineageTag: 987f875a-1f6f-45cf-bfed-99266852b7e9
+
+	measure 'Ticket Medio' = DIVIDE([Total Vendas], [Unidades Vendidas])
+		formatString: $#,0.00
+		displayFolder: Medidas
+		lineageTag: f0a3cf4b-ed5c-43d2-a331-aa5266d7481a
+
+	measure 'Vendas Ano Anterior' = CALCULATE([Total Vendas], SAMEPERIODLASTYEAR(D_Calendario[Date]))
+		formatString: $#,0
+		displayFolder: Medidas
+		lineageTag: 41a7e2f2-1c89-475d-a0db-d0141ae449f3
+
+	measure 'Variacao Vendas %' = DIVIDE([Total Vendas] - [Vendas Ano Anterior], [Vendas Ano Anterior])
+		formatString: 0.0%
+		displayFolder: Medidas
+		lineageTag: 629b973b-85d2-48f8-a3fc-5307d39a59f9
+
+	column SK_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 4757aed6-c08f-41a4-84e4-9c9807b91579
+		summarizeBy: count
+		sourceColumn: SK_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID_Produto
+		dataType: int64
+		formatString: 0
+		lineageTag: 3b4b2ba4-094e-43d5-af9d-93b5bd48e48f
+		summarizeBy: none
+		sourceColumn: ID_Produto
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID_Produto_Detalhe
+		dataType: int64
+		formatString: 0
+		lineageTag: f4404ad4-1784-4fd3-964e-283a5ded7d8b
+		summarizeBy: sum
+		sourceColumn: ID_Produto_Detalhe
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID_Desconto
+		dataType: int64
+		formatString: 0
+		lineageTag: 507d9658-20a2-4f6f-afee-476bea724df9
+		summarizeBy: none
+		sourceColumn: ID_Desconto
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID_Detalhe
+		dataType: int64
+		formatString: 0
+		lineageTag: e8c667c9-8e8b-478d-9ab0-b69a48018e92
+		summarizeBy: none
+		sourceColumn: ID_Detalhe
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f334dac5-c191-449d-accc-3f112bb3399f
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: 13c319a3-cb6b-4fe3-ae6c-32684266ac4e
+			defaultHierarchy: LocalDateTable_fa0cfa7e-bd94-4b45-a711-6f64b1421fa2.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Units Sold'
+		dataType: double
+		lineageTag: 86468dc9-4813-4bc4-926a-58040587e963
+		summarizeBy: sum
+		sourceColumn: Units Sold
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Sale Price'
+		dataType: int64
+		formatString: 0
+		lineageTag: 43ef632b-6839-4a7b-b4a4-619836cc0313
+		summarizeBy: sum
+		sourceColumn: Sale Price
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gross Sales'
+		dataType: double
+		lineageTag: c9ce7b3d-2022-4797-a271-3792038c1913
+		summarizeBy: sum
+		sourceColumn: Gross Sales
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Discounts
+		dataType: double
+		lineageTag: 3e4f8aa2-08f7-4419-bde2-e61c5d6f3f21
+		summarizeBy: sum
+		sourceColumn: Discounts
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Sales
+		dataType: double
+		lineageTag: 202b27fd-6397-403d-b82c-8674141133d3
+		summarizeBy: sum
+		sourceColumn: Sales
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column COGS
+		dataType: double
+		lineageTag: c6023890-deca-4d3a-9701-bf7b986f2a51
+		summarizeBy: sum
+		sourceColumn: COGS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Profit
+		dataType: double
+		lineageTag: f72126c8-e019-4555-a43d-715c3e670654
+		summarizeBy: sum
+		sourceColumn: Profit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition F_Vendas = m
+		mode: import
+		source =
+				let
+				    Origem = Financials_origem,
+				    Taxa = Table.AddColumn(Origem, "Desconto %", each if [Gross Sales] = 0 then 0 else Number.Round([Discounts] / [Gross Sales], 4), type number),
+				    SK = Table.AddIndexColumn(Taxa, "SK_ID", 1, 1, Int64.Type),
+				    MProd = Table.NestedJoin(SK, {"Product"}, D_Produtos, {"Produto"}, "P", JoinKind.LeftOuter),
+				    EProd = Table.ExpandTableColumn(MProd, "P", {"ID_Produto"}),
+				    MDet = Table.NestedJoin(EProd, {"Product", "Sale Price", "Manufacturing Price"}, D_Produtos_Detalhes, {"Produto", "Sale Price", "Manufacturing Price"}, "PD", JoinKind.LeftOuter),
+				    EDet = Table.ExpandTableColumn(MDet, "PD", {"ID_Produto_Detalhe"}),
+				    MDesc = Table.NestedJoin(EDet, {"Discount Band", "Desconto %"}, D_Descontos, {"Discount Band", "Desconto %"}, "D", JoinKind.LeftOuter),
+				    EDesc = Table.ExpandTableColumn(MDesc, "D", {"ID_Desconto"}),
+				    MSeg = Table.NestedJoin(EDesc, {"Segment", "Country"}, D_Detalhes, {"Segment", "Country"}, "S", JoinKind.LeftOuter),
+				    ESeg = Table.ExpandTableColumn(MSeg, "S", {"ID_Detalhe"}),
+				    Selecionadas = Table.SelectColumns(ESeg, {"SK_ID", "ID_Produto", "ID_Produto_Detalhe", "ID_Desconto", "ID_Detalhe", "Date", "Units Sold", "Sale Price", "Gross Sales", "Discounts", "Sales", "COGS", "Profit"}),
+				    Tipos = Table.TransformColumnTypes(Selecionadas, {{"ID_Produto", Int64.Type}, {"ID_Produto_Detalhe", Int64.Type}, {"ID_Desconto", Int64.Type}, {"ID_Detalhe", Int64.Type}})
+				in
+				    Tipos
+
+	annotation PBI_ResultType = Table
+
