@@ -1,0 +1,24 @@
+table Metrica
+	lineageTag: 07d9b9d4-940b-4c69-a88c-428abf3f9cb3
+
+	column Metrica
+		dataType: string
+		lineageTag: de5106fa-2b38-4fa7-9577-14e69b6445be
+		summarizeBy: none
+		sourceColumn: [Metrica]
+		sortByColumn: Ordem
+
+	column Ordem
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 18f00874-e38f-48b0-931c-9d60dec9dd02
+		summarizeBy: none
+		sourceColumn: [Ordem]
+
+	partition Metrica = calculated
+		mode: import
+		source = DATATABLE("Metrica", STRING, "Ordem", INTEGER, {{"Vendas", 1}, {"Lucro", 2}, {"Unidades", 3}, {"Descontos", 4}})
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,40 @@
+{
+  "name": "NeonDark",
+  "dataColors": [
+    "#00E5FF",
+    "#B6FF3B",
+    "#FF3DA5",
+    "#8B5CF6",
+    "#FFB020",
+    "#3B82F6",
+    "#2DD4BF",
+    "#F472B6"
+  ],
+  "background": "#121A2B",
+  "foreground": "#E8EEF9",
+  "tableAccent": "#00E5FF",
+  "good": "#B6FF3B",
+  "neutral": "#FFB020",
+  "bad": "#FF3DA5",
+  "maximum": "#00E5FF",
+  "center": "#FFB020",
+  "minimum": "#FF3DA5",
+  "textClasses": {
+    "label": {
+      "fontFace": "Segoe UI",
+      "color": "#E8EEF9"
+    },
+    "callout": {
+      "fontFace": "Segoe UI",
+      "color": "#00E5FF"
+    },
+    "title": {
+      "fontFace": "Segoe UI",
+      "color": "#E8EEF9"
+    },
+    "header": {
+      "fontFace": "Segoe UI",
+      "color": "#8EA0BF"
+    }
+  }
+}

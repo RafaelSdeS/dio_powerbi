@@ -1,0 +1,2729 @@
+cultureInfo pt-BR
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "financials": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "financials": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "financials.segment": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "ConceptualProperty": "Segment"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "segment": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "division": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "subdivision": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "section": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "sector": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "bit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "fragment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "part": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "piece": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "portion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "slice": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "financials.country": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "ConceptualProperty": "Country"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "country": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "financials.product": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "ConceptualProperty": "Product"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "product": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "artifact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "item": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "merchandise": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "produce": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "financials.discount_band": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "ConceptualProperty": "Discount Band"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "discount band": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "band": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "discount posse": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "posse": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "discount group": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "discount gang": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "discount crew": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "discount crowd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "discount mob": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "gang": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "crew": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "crowd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "financials.unit_sold": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "ConceptualProperty": "Units Sold"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "unit sold": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "module sold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "element sold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "entity sold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "group sold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "component sold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "constituent sold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "item sold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "part sold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "section sold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "financials.manufacturing_price": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "ConceptualProperty": "Manufacturing Price"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "manufacturing price": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "price": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "manufacturing value": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "manufacturing worth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "manufacturing fee": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "manufacturing charge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "manufacturing amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "manufacturing bill": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "manufacturing rate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "manufacturing expense": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "manufacturing cost": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "manufacturing outlay": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "financials.sale_price": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "ConceptualProperty": "Sale Price"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sale price": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "price": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "sale value": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale worth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale fee": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale charge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale bill": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale rate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale expense": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale cost": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale outlay": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "financials.gross_sale": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "ConceptualProperty": "Gross Sales"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "gross sale": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate sale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.647
+			          }
+			        },
+			        {
+			          "overall sale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.647
+			          }
+			        },
+			        {
+			          "whole sale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.647
+			          }
+			        },
+			        {
+			          "sum sale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "total sale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "gross auction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "gross transaction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "gross deal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "gross trade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "gross vending": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "financials.discount": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "ConceptualProperty": "Discounts"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "discount": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "reduction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "markdown": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "concession": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "deduction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "rebate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "financials.sale": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "ConceptualProperty": " Sales"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sale": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Sales": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "auction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "transaction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "deal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "trade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "vending": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "retailing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "selling": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "financials.cog": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "ConceptualProperty": "COGS"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cog": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mechanism": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "cogwheel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "gearwheel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "flywheel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "component": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "part": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "gear": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "wheel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "financials.profit": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "ConceptualProperty": "Profit"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "profit": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "return": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "advantage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "benefit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "use": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "reward": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "financials.date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "ConceptualProperty": "Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "financials.date.variation.hierarquia_de_data": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hierarquia de data": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hierarquia de information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de record": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "financials.date.variation.hierarquia_de_data.ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "financials.date.variation.hierarquia_de_data.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "financials.date.variation.hierarquia_de_data.mê": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Mês"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "financials.date.variation.hierarquia_de_data.dia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Dia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "financials.month_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "ConceptualProperty": "Month Number"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month number": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month no": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "mth number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ]
+			    },
+			    "financials.month_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "ConceptualProperty": "Month Name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "month title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "month label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "month tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "mth name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ]
+			    },
+			    "financials.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "ConceptualProperty": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "financials.unidades_vendidas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "ConceptualProperty": "Unidades Vendidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Unidades": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "financials.total_vendas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "ConceptualProperty": "Total Vendas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Vendas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "financials.metrica_selecionada": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "ConceptualProperty": "Metrica Selecionada"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Métrica": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "financials.margem_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "ConceptualProperty": "Margem %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Margem": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "financials.total_lucro": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "ConceptualProperty": "Total Lucro"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Lucro": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "financials.ticket_medio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "ConceptualProperty": "Ticket Medio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Ticket médio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "financials.total_cogs": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "financials",
+			          "ConceptualProperty": "Total COGS"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Custo (COGS)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "financials_date_variation_hierarquia_de_data_ano_has_financials_date_variation_hierarquia_de_data_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "financials"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials.date.variation.hierarquia_de_data.ano": {
+			          "Target": {
+			            "Entity": "financials.date.variation.hierarquia_de_data.ano"
+			          }
+			        },
+			        "financials.date.variation.hierarquia_de_data.trimestre": {
+			          "Target": {
+			            "Entity": "financials.date.variation.hierarquia_de_data.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials.date.variation.hierarquia_de_data.ano"
+			            },
+			            "Object": {
+			              "Role": "financials.date.variation.hierarquia_de_data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials.date.variation.hierarquia_de_data.trimestre"
+			            },
+			            "Object": {
+			              "Role": "financials.date.variation.hierarquia_de_data.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "financials.date.variation.hierarquia_de_data.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "financials.date.variation.hierarquia_de_data.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "financials_date_variation_hierarquia_de_data_has_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "financials"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials.date.variation.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "financials.date.variation.hierarquia_de_data"
+			          }
+			        },
+			        "financials.date.variation.hierarquia_de_data.dia": {
+			          "Target": {
+			            "Entity": "financials.date.variation.hierarquia_de_data.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials.date.variation.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "financials.date.variation.hierarquia_de_data.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "financials_date_variation_hierarquia_de_data_has_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "financials"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials.date.variation.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "financials.date.variation.hierarquia_de_data"
+			          }
+			        },
+			        "financials.date.variation.hierarquia_de_data.mê": {
+			          "Target": {
+			            "Entity": "financials.date.variation.hierarquia_de_data.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials.date.variation.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "financials.date.variation.hierarquia_de_data.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "financials_date_variation_hierarquia_de_data_has_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "financials"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials.date.variation.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "financials.date.variation.hierarquia_de_data"
+			          }
+			        },
+			        "financials.date.variation.hierarquia_de_data.trimestre": {
+			          "Target": {
+			            "Entity": "financials.date.variation.hierarquia_de_data.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials.date.variation.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "financials.date.variation.hierarquia_de_data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "financials_date_variation_hierarquia_de_data_has_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "financials"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials.date.variation.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "financials.date.variation.hierarquia_de_data"
+			          }
+			        },
+			        "financials.date.variation.hierarquia_de_data.ano": {
+			          "Target": {
+			            "Entity": "financials.date.variation.hierarquia_de_data.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials.date.variation.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "financials.date.variation.hierarquia_de_data.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "financials_date_has_variation_hierarquia_de_data": {
+			      "Binding": {
+			        "ConceptualEntity": "financials"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials.date": {
+			          "Target": {
+			            "Entity": "financials.date"
+			          }
+			        },
+			        "financials.date.variation.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "financials.date.variation.hierarquia_de_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials.date"
+			            },
+			            "Object": {
+			              "Role": "financials.date.variation.hierarquia_de_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "financials_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "financials"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials": {
+			          "Target": {
+			            "Entity": "financials"
+			          }
+			        },
+			        "financials.year": {
+			          "Target": {
+			            "Entity": "financials.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials"
+			            },
+			            "Object": {
+			              "Role": "financials.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "financials_has_month_name": {
+			      "Binding": {
+			        "ConceptualEntity": "financials"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials": {
+			          "Target": {
+			            "Entity": "financials"
+			          }
+			        },
+			        "financials.month_name": {
+			          "Target": {
+			            "Entity": "financials.month_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials"
+			            },
+			            "Object": {
+			              "Role": "financials.month_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "financials_has_month_number": {
+			      "Binding": {
+			        "ConceptualEntity": "financials"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials": {
+			          "Target": {
+			            "Entity": "financials"
+			          }
+			        },
+			        "financials.month_number": {
+			          "Target": {
+			            "Entity": "financials.month_number"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials"
+			            },
+			            "Object": {
+			              "Role": "financials.month_number"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "financials_has_date": {
+			      "Binding": {
+			        "ConceptualEntity": "financials"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials": {
+			          "Target": {
+			            "Entity": "financials"
+			          }
+			        },
+			        "financials.date": {
+			          "Target": {
+			            "Entity": "financials.date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials"
+			            },
+			            "Object": {
+			              "Role": "financials.date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "financials_has_profit": {
+			      "Binding": {
+			        "ConceptualEntity": "financials"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials": {
+			          "Target": {
+			            "Entity": "financials"
+			          }
+			        },
+			        "financials.profit": {
+			          "Target": {
+			            "Entity": "financials.profit"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials"
+			            },
+			            "Object": {
+			              "Role": "financials.profit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "financials_has_cog": {
+			      "Binding": {
+			        "ConceptualEntity": "financials"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials": {
+			          "Target": {
+			            "Entity": "financials"
+			          }
+			        },
+			        "financials.cog": {
+			          "Target": {
+			            "Entity": "financials.cog"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials"
+			            },
+			            "Object": {
+			              "Role": "financials.cog"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "financials_has_sale": {
+			      "Binding": {
+			        "ConceptualEntity": "financials"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials": {
+			          "Target": {
+			            "Entity": "financials"
+			          }
+			        },
+			        "financials.sale": {
+			          "Target": {
+			            "Entity": "financials.sale"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials"
+			            },
+			            "Object": {
+			              "Role": "financials.sale"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "financials_has_discount": {
+			      "Binding": {
+			        "ConceptualEntity": "financials"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials": {
+			          "Target": {
+			            "Entity": "financials"
+			          }
+			        },
+			        "financials.discount": {
+			          "Target": {
+			            "Entity": "financials.discount"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials"
+			            },
+			            "Object": {
+			              "Role": "financials.discount"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "financials_has_gross_sale": {
+			      "Binding": {
+			        "ConceptualEntity": "financials"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials": {
+			          "Target": {
+			            "Entity": "financials"
+			          }
+			        },
+			        "financials.gross_sale": {
+			          "Target": {
+			            "Entity": "financials.gross_sale"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials"
+			            },
+			            "Object": {
+			              "Role": "financials.gross_sale"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "financials_has_sale_price": {
+			      "Binding": {
+			        "ConceptualEntity": "financials"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials": {
+			          "Target": {
+			            "Entity": "financials"
+			          }
+			        },
+			        "financials.sale_price": {
+			          "Target": {
+			            "Entity": "financials.sale_price"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials"
+			            },
+			            "Object": {
+			              "Role": "financials.sale_price"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "financials"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "financials.sale_price"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "financials_has_manufacturing_price": {
+			      "Binding": {
+			        "ConceptualEntity": "financials"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials": {
+			          "Target": {
+			            "Entity": "financials"
+			          }
+			        },
+			        "financials.manufacturing_price": {
+			          "Target": {
+			            "Entity": "financials.manufacturing_price"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials"
+			            },
+			            "Object": {
+			              "Role": "financials.manufacturing_price"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "financials"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "financials.manufacturing_price"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "financials_has_unit_sold": {
+			      "Binding": {
+			        "ConceptualEntity": "financials"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials": {
+			          "Target": {
+			            "Entity": "financials"
+			          }
+			        },
+			        "financials.unit_sold": {
+			          "Target": {
+			            "Entity": "financials.unit_sold"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials"
+			            },
+			            "Object": {
+			              "Role": "financials.unit_sold"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "financials_has_discount_band": {
+			      "Binding": {
+			        "ConceptualEntity": "financials"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials": {
+			          "Target": {
+			            "Entity": "financials"
+			          }
+			        },
+			        "financials.discount_band": {
+			          "Target": {
+			            "Entity": "financials.discount_band"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials"
+			            },
+			            "Object": {
+			              "Role": "financials.discount_band"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "financials_has_product": {
+			      "Binding": {
+			        "ConceptualEntity": "financials"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials": {
+			          "Target": {
+			            "Entity": "financials"
+			          }
+			        },
+			        "financials.product": {
+			          "Target": {
+			            "Entity": "financials.product"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials"
+			            },
+			            "Object": {
+			              "Role": "financials.product"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "financials_has_country": {
+			      "Binding": {
+			        "ConceptualEntity": "financials"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials": {
+			          "Target": {
+			            "Entity": "financials"
+			          }
+			        },
+			        "financials.country": {
+			          "Target": {
+			            "Entity": "financials.country"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials"
+			            },
+			            "Object": {
+			              "Role": "financials.country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "financials_has_segment": {
+			      "Binding": {
+			        "ConceptualEntity": "financials"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials": {
+			          "Target": {
+			            "Entity": "financials"
+			          }
+			        },
+			        "financials.segment": {
+			          "Target": {
+			            "Entity": "financials.segment"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials"
+			            },
+			            "Object": {
+			              "Role": "financials.segment"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "financials_in_country": {
+			      "Binding": {
+			        "ConceptualEntity": "financials"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials": {
+			          "Target": {
+			            "Entity": "financials"
+			          }
+			        },
+			        "financials.country": {
+			          "Target": {
+			            "Entity": "financials.country"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "financials.country"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "financials"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "financials.country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "financials_date_variation_hierarquia_de_data_trimestre_has_financials_date_variation_hierarquia_de_data_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "financials"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials.date.variation.hierarquia_de_data.trimestre": {
+			          "Target": {
+			            "Entity": "financials.date.variation.hierarquia_de_data.trimestre"
+			          }
+			        },
+			        "financials.date.variation.hierarquia_de_data.mê": {
+			          "Target": {
+			            "Entity": "financials.date.variation.hierarquia_de_data.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials.date.variation.hierarquia_de_data.trimestre"
+			            },
+			            "Object": {
+			              "Role": "financials.date.variation.hierarquia_de_data.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials.date.variation.hierarquia_de_data.mê"
+			            },
+			            "Object": {
+			              "Role": "financials.date.variation.hierarquia_de_data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "financials.date.variation.hierarquia_de_data.mê"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "financials.date.variation.hierarquia_de_data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "financials_date_variation_hierarquia_de_data_mê_has_financials_date_variation_hierarquia_de_data_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "financials"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "financials.date.variation.hierarquia_de_data.mê": {
+			          "Target": {
+			            "Entity": "financials.date.variation.hierarquia_de_data.mê"
+			          }
+			        },
+			        "financials.date.variation.hierarquia_de_data.dia": {
+			          "Target": {
+			            "Entity": "financials.date.variation.hierarquia_de_data.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials.date.variation.hierarquia_de_data.mê"
+			            },
+			            "Object": {
+			              "Role": "financials.date.variation.hierarquia_de_data.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "financials.date.variation.hierarquia_de_data.dia"
+			            },
+			            "Object": {
+			              "Role": "financials.date.variation.hierarquia_de_data.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "financials.date.variation.hierarquia_de_data.dia"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "financials.date.variation.hierarquia_de_data.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+
