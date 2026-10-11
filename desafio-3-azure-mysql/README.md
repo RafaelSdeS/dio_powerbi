@@ -2,13 +2,16 @@
 
 Banco `azure_company` (modelo clássico Company) em **Azure Database for MySQL**, consumido pelo Power BI Desktop e tratado no Power Query.
 
+> **Status da entrega:** scripts SQL, consultas do Power Query e projeto Power BI prontos e validados em um MySQL local. A **conexão com uma instância na Azure não foi realizada** nesta entrega; o roteiro das seções 1 e 2 descreve como fazê-la, e o `sql/executar_na_azure.ps1` executa os scripts no servidor com um único comando.
+
 ```
 desafio-3-azure-mysql/
 ├─ sql/                         scripts do banco e consultas
 │  ├─ 01_schema.sql             cria o schema e as tabelas
 │  ├─ 02_dados.sql              carga de dados
 │  ├─ 03_verificacoes.sql       nulos, gerentes, departamentos, horas
-│  └─ 04_consultas.sql          consultas usadas na transformação (inclui colaborador × gerente)
+│  ├─ 04_consultas.sql          consultas usadas na transformação (inclui colaborador × gerente)
+│  └─ executar_na_azure.ps1     executa os scripts no MySQL da Azure (pede servidor, usuário e senha)
 ├─ powerquery/                  código M de cada consulta (um arquivo por consulta)
 └─ azure_company_transform.pbip projeto Power BI com as transformações
 ```
@@ -67,4 +70,4 @@ order by Gerente, Colaborador;
 Um departamento pode ter **vários locais** (*Research* tem 3: Bellaire, Sugarland e Houston). Ao mesclar as consultas `departament` e `dept_locations` pela chave `Dnumber`, o Power Query gera **uma linha por combinação** departamento-local (5 linhas no total), e a coluna `Store` torna cada combinação única. "Atribuir" um valor (trazer um único local para cada departamento, como numa busca simples) só funcionaria se houvesse **um** local por departamento; aqui perderia os demais ou duplicaria o departamento de forma incorreta. Por isso a mescla é o passo certo e depois basta combinar os dois textos em uma coluna.
 
 ## 5. Validação
-As transformações foram testadas carregando o mesmo schema num MySQL local e comparando o resultado do Power Query com as consultas SQL: 8 colaboradores, gerentes e departamentos idênticos, 5 combinações departamento-local, contagem por gerente (Franklin Wong 3, James Borg 2, Jennifer Wallace 2) e horas por projeto iguais. A conexão com a instância na **Azure** depende do seu servidor e deve ser conferida por você ao atualizar o relatório.
+As transformações foram testadas carregando o mesmo schema num MySQL local e comparando o resultado do Power Query com as consultas SQL: 8 colaboradores, gerentes e departamentos idênticos, 5 combinações departamento-local, contagem por gerente (Franklin Wong 3, James Borg 2, Jennifer Wallace 2) e horas por projeto iguais. A conexão com uma instância na **Azure** não foi testada: depende de um servidor criado na conta de quem executa o roteiro.
