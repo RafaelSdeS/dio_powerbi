@@ -16,6 +16,11 @@ Relatório de 2 páginas sobre o **modelo estrela do Desafio 4** (`F_Vendas` + 5
 - Tabela de desempenho por produto (unidades, vendas, lucro, margem e índice do produto).
 - Rosca de vendas por faixa de desconto e colunas de lucro por trimestre e ano.
 
+## Prints
+**Detalhes**
+
+![Página Detalhes](prints/detalhes.png)
+
 ## Experiência do usuário
 - **Posicionamento:** cabeçalho com navegação sempre no mesmo lugar; filtros no topo, KPIs logo abaixo, análises no restante, seguindo a leitura em Z.
 - **Proporção áurea:** colunas de análise com ~62% / 38% da largura (761 px e 455 px).

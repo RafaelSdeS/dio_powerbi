@@ -51,42 +51,6 @@
             }
           ]
         },
-        "X": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "F_Vendas"
-                    }
-                  },
-                  "Property": "Unidades Vendidas"
-                }
-              },
-              "queryRef": "F_Vendas.Unidades Vendidas",
-              "nativeQueryRef": "Unidades Vendidas"
-            }
-          ]
-        },
-        "Y": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "F_Vendas"
-                    }
-                  },
-                  "Property": "Total Vendas"
-                }
-              },
-              "queryRef": "F_Vendas.Total Vendas",
-              "nativeQueryRef": "Total Vendas"
-            }
-          ]
-        },
         "Tooltips": {
           "projections": [
             {
@@ -116,6 +80,43 @@
               },
               "queryRef": "F_Vendas.Participacao Vendas %",
               "nativeQueryRef": "Participacao Vendas %"
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "F_Vendas"
+                    }
+                  },
+                  "Property": "Unidades Vendidas"
+                }
+              },
+              "queryRef": "F_Vendas.Unidades Vendidas",
+              "nativeQueryRef": "Unidades Vendidas",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "F_Vendas"
+                    }
+                  },
+                  "Property": "Total Vendas"
+                }
+              },
+              "queryRef": "F_Vendas.Total Vendas",
+              "nativeQueryRef": "Total Vendas"
             }
           ]
         }

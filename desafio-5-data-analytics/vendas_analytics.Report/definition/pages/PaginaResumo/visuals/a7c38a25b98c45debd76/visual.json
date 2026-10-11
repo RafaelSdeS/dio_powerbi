@@ -62,13 +62,6 @@
                   "Value": "'Segoe UI'"
                 }
               }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "1L"
-                }
-              }
             }
           }
         }
