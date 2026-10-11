@@ -2,7 +2,7 @@
 
 A tabela única `financials` (700 linhas) foi decomposta em um **esquema em estrela**: uma tabela fato e dimensões, todas construídas no Power Query (M) a partir de uma cópia oculta da origem, mais um calendário em DAX.
 
-> Esquema: salve aqui o print da aba **Modelo** como `esquema_estrela.png` (Power BI Desktop → Exibição de modelo; o layout já está salvo em `diagramLayout.json`).
+![Esquema em estrela no Power BI Desktop](esquema_estrela.png)
 
 ```
             D_Produtos ──┐                 ┌── D_Descontos
